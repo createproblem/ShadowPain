@@ -25,3 +25,12 @@ void ABaseWeapon::Tick(float DeltaTime)
 
 }
 
+#if WITH_EDITOR
+void ABaseWeapon::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+{
+	Damage = 25;
+	Range = 100;
+
+	Super::PostEditChangeProperty(PropertyChangedEvent);
+}
+#endif // WITH_EDITOR

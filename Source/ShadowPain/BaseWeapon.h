@@ -6,10 +6,25 @@
 #include "GameFramework/Actor.h"
 #include "BaseWeapon.generated.h"
 
-UCLASS()
+UCLASS(Blueprintable)
 class SHADOWPAIN_API ABaseWeapon : public AActor
 {
 	GENERATED_BODY()
+
+public:
+	// Damage
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
+		float Damage = 25;
+
+	// Range
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
+		float Range = 100;
+
+	// Editor code to make updating values in the editor cleaner
+#if WITH_EDITOR
+	virtual void PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedEvent)
+		override;
+#endif // WITH_EDITOR
 	
 public:	
 	// Sets default values for this actor's properties
