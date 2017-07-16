@@ -30,6 +30,7 @@ void ABaseWeapon::PostEditChangeProperty(FPropertyChangedEvent& PropertyChangedE
 {
 	Damage = 25;
 	Range = 100;
+    Cooldown = false;
 
 	Super::PostEditChangeProperty(PropertyChangedEvent);
 }

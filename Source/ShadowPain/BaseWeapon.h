@@ -19,6 +19,10 @@ public:
 	// Range
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
 		float Range = 100;
+    
+    // Cooldown
+    UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
+        bool Cooldown = false;
 
 	// Editor code to make updating values in the editor cleaner
 #if WITH_EDITOR
