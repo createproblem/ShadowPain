@@ -14,7 +14,7 @@ class SHADOWPAIN_API ABaseWeapon : public AActor
 public:
 	// Damage
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
-		float Damage = 25;
+		float Damage = -25;
 
 	// Range
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "BaseWeapon")
